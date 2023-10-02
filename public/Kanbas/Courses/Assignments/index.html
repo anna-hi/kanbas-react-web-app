@@ -1,167 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
-  <table width="100%">
-    <thead></thead>
-    <tbody>
-      <tr>
-        <td valign="top">
-          <ul>
-            <li>
-              <a href="../../Account/AccountNavigation/index.html">Account</a>
-            </li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="../CourseNavigation/index.html">Courses</a></li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Inbox</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">Commons</a></li>
-            <li><a href="#">Help</a></li>
-          </ul>
-        </td>
-        <td valign="top">
-          <ul>
-            <li><a href="../Home/home.html">Home</a></li>
-            <li><a href="#">Modules</a></li>
-            <li><a href="#">Piazza</a></li>
-            <li><a href="#">Zoom Meetings</a></li>
-            <li><a href="../Assignments/index.html">Assignments</a></li>
-            <li><a href="#">Quizzes</a></li>
-            <li><a href="../Grades/index.html"></a>Grades</li>
-            <li><a href="#">People</a></li>
-            <li><a href="#">Panopto Video</a></li>
-            <li><a href="#">Discussions</a></li>
-            <li><a href="#">Announcements</a></li>
-            <li><a href="#">Pages</a></li>
-            <li><a href="#">Files</a></li>
-            <li><a href="#">Rubrics</a></li>
-            <li><a href="#">Outcomes</a></li>
-            <li><a href="#">Collaborations</a></li>
-            <li><a href="#">Syllabus</a></li>
-            <li><a href="#">Settings</a></li>
-          </ul>
-        </td>
-        <td>
-          <input placeholder="Search for Assignments" />
-          <button>Group</button>
-          <button>Assignment</button>
-          <select>
-            <option selected>Edit Assignment Dates</option>
-          </select>
-          <hr />
-          <h3>
-            ASSIGNMENTS 40% of Total
-            <select>
-              <option selected>Edit</option>
-              <option>Speed Grader</option>
-              <option>Duplicate</option>
-              <option>Delete</option>
-              <option>Move to...</option>
-              <option>Send to...</option>
-              <option>Copy to...</option>
-              <option>Share to Commons...</option>
-            </select>
-          </h3>
-
-          <ul>
-            <li>
-              <a href="edit.html">A1 - ENV + HTML Multiple Modules</a> | Not
-              available yet
-            </li>
-            <li>
-              <a href="edit.html">A2 - CSS + BOOSTRAP Multiple Modules</a> | Not
-              available yet
-            </li>
-            <li>
-              <a href="edit.html">A3 - JS + REACT Multiple Modules</a> | Not
-              available yet
-            </li>
-            <li>
-              <a href="edit.html">A4 - STATE + REDUX Multiple Modules</a> | Not
-              available yet
-            </li>
-            <li>
-              <a href="edit.html">A5 - NODE + SESSION Multiple Modules</a> | Not
-              available yet
-            </li>
-            <li>
-              <a href="edit.html">A6 - MONGO + MONGOOSE Multiple Modules</a> |
-              Not available yet
-            </li>
-          </ul>
-          <h3>
-            QUIZZES 10% of Total
-            <select>
-              <option selected>Edit</option>
-              <option>Speed Grader</option>
-              <option>Duplicate</option>
-              <option>Delete</option>
-              <option>Move to...</option>
-              <option>Send to...</option>
-              <option>Copy to...</option>
-              <option>Share to Commons...</option>
-            </select>
-          </h3>
-          <ul>
-            <li>
-              <a href="#">Q1 - HTML Multiple Modules</a> | Not available yet
-            </li>
-            <li>
-              <a href="#">Q2 - CSS Multiple Modules</a> | Not available yet
-            </li>
-            <li>
-              <a href="#">Q3 - JS, ES6 Multiple Modules</a> | Not available yet
-            </li>
-            <li>
-              <a href="#">Q4 - NODE Multiple Modules</a> | Not available yet
-            </li>
-            <li>
-              <a href="#">Q5 - MONGO Multiple Modules</a> | Not available yet
-            </li>
-          </ul>
-          <h3>
-            EXAMS 20% of Total
-            <select>
-              <option selected>Edit</option>
-              <option>Speed Grader</option>
-              <option>Duplicate</option>
-              <option>Delete</option>
-              <option>Move to...</option>
-              <option>Send to...</option>
-              <option>Copy to...</option>
-              <option>Share to Commons...</option>
-            </select>
-          </h3>
-          <ul>
-            <li>
-              <a href="#">Midterm Multiple Modules</a> | Not available yet
-            </li>
-            <li><a href="#">Final Multiple Modules</a> | Not available yet</li>
-          </ul>
-          <h3>
-            PROJECT 30% of Total
-            <select>
-              <option selected>Edit</option>
-              <option>Speed Grader</option>
-              <option>Duplicate</option>
-              <option>Delete</option>
-              <option>Move to...</option>
-              <option>Send to...</option>
-              <option>Copy to...</option>
-              <option>Share to Commons...</option>
-            </select>
-          </h3>
-          <ul>
-            <li>
-              <a href="#">Project Multiple Modules</a> | Not available yet
-            </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
   <head>
-    <meta charset="UTF-8" />
-    <title>Title</title>
+    <link
+      href="../../../vendors/Bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assignments.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css"
+      rel="stylesheet"
+    />
   </head>
+  <body>
+    <div class="wd-flex-row-container">
+      <div class="wd-kanbas-navigator">
+        <ul style="padding-left: 0%">
+          <li>
+            <a href="#" class="wd-not-selected-item">
+              <div>
+                <img src="../../NU-logo.png" width="75px" height="75px" />
+              </div>
+            </a>
+          </li>
+          <li class="wd-selected-item">
+            <a href="../Account/AccountNavigation/index.html">
+              <div>
+                <i class="bi bi-person-circle"></i>
+              </div>
+              Account</a
+            >
+          </li>
+          <li>
+            <a href="#" class="wd-not-selected-item">
+              <div>
+                <i class="bi bi-speedometer2"></i>
+              </div>
+              <div class="menu-item_text">Dashboard</div></a
+            >
+          </li>
+          <li>
+            <a
+              href="../Courses/CourseNavigation/index.html"
+              class="wd-not-selected-item"
+            >
+              <div>
+                <i class="bi bi-journals"></i>
+              </div>
+              Courses</a
+            >
+          </li>
+          <li>
+            <a href="#" class="wd-not-selected-item">
+              <div>
+                <i class="bi bi-calendar-week"></i>
+              </div>
+              Calendar</a
+            >
+          </li>
+          <li>
+            <a href="#" class="wd-not-selected-item">
+              <div>
+                <i class="bi bi-envelope-open"></i>
+              </div>
+              Inbox</a
+            >
+          </li>
+          <li>
+            <a href="#" class="wd-not-selected-item">
+              <div>
+                <i class="bi bi-clock"></i>
+              </div>
+              History</a
+            >
+          </li>
+          <li>
+            <a href="#" class="wd-not-selected-item">
+              <div>
+                <i class="bi bi-play-btn"></i>
+              </div>
+              Studio</a
+            >
+          </li>
+          <li>
+            <a href="#" class="wd-not-selected-item">
+              <div>
+                <i class="bi bi-arrow-right-circle"></i>
+              </div>
+              Commons</a
+            >
+          </li>
+          <li>
+            <a href="#" class="wd-not-selected-item">
+              <div>
+                <i class="bi bi-question-circle"></i>
+              </div>
+              Help</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="wd-flex-grow-1 container-fluid">
+        <div class="wd-header row">
+          <i class="fa-solid fa-bars col-auto"></i>
+          <nav
+            class="col"
+            style="--bs-breadcrumb-divider: '>'; margin-bottom: 0px"
+            aria-label="breadcrumb"
+          >
+            <ol class="breadcrumb" style="margin-bottom: 0px">
+              <li class="breadcrumb-item">
+                <a href="#">CS45510.12631.202410</a>
+              </li>
+              <li
+                class="breadcrumb-item active"
+                aria-current="page"
+                style="font-size: 18px"
+              >
+                Assignments
+              </li>
+            </ol>
+          </nav>
+          <button
+            type="button"
+            class="btn btn-secondary col-auto"
+            style="align-items: center"
+          >
+            <i class="fa-solid fa-glasses" styel="color:black;"></i> Student
+            View
+          </button>
+          <hr />
+        </div>
+        <div class="d-flex flex-row col-auto">
+          <div class="wd-profile-navigator override-bs col-auto">
+            <h6>202410_1 Fall 2023 Semest...</h6>
+            <ul class="override-bs">
+              <li class="wd-account-not-selected-item">
+                <a href="../Home/home.html">Home</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">Modules</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">Piazza</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">Zoom Meetings</a>
+              </li>
+              <li class="wd-account-selected-item">
+                <a href="#">Assignments</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">Quizzzes</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">Grades</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">People</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">Panopoto Video</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">
+                  <span class="float-end">
+                    <i
+                      class="fa-regular fa-eye-slash"
+                      style="color: grey"
+                    ></i> </span
+                  >Discussions</a
+                >
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">
+                  <span class="float-end">
+                    <i
+                      class="fa-regular fa-eye-slash"
+                      style="color: grey"
+                    ></i> </span
+                  >Announcements</a
+                >
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">
+                  <span class="float-end">
+                    <i
+                      class="fa-regular fa-eye-slash"
+                      style="color: grey"
+                    ></i> </span
+                  >Page</a
+                >
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">
+                  <span class="float-end">
+                    <i
+                      class="fa-regular fa-eye-slash"
+                      style="color: grey"
+                    ></i> </span
+                  >Files</a
+                >
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">
+                  <span class="float-end">
+                    <i
+                      class="fa-regular fa-eye-slash"
+                      style="color: grey"
+                    ></i> </span
+                  >Rubrics</a
+                >
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">
+                  <span class="float-end">
+                    <i
+                      class="fa-regular fa-eye-slash"
+                      style="color: grey"
+                    ></i> </span
+                  >Outcomes</a
+                >
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">
+                  <span class="float-end">
+                    <i
+                      class="fa-regular fa-eye-slash"
+                      style="color: grey"
+                    ></i> </span
+                  >Collaborations</a
+                >
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">
+                  <span class="float-end">
+                    <i
+                      class="fa-regular fa-eye-slash"
+                      style="color: grey"
+                    ></i> </span
+                  >Syllabus</a
+                >
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">Progress Reports (EAB Navigate)</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">Settings</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col wd-columns">
+            <div class="text-nowrap">
+              <span class="float-end">
+                <button class="wd-home-gray-btns btn-secondary">
+                  <i class="fa-solid fa-plus"></i>
+                  Group
+                </button>
+                <button class="wd-add-module-btn btn-danger">
+                  <i class="fa-solid fa-plus"></i>
+                  Assignment
+                </button>
+                <button class="wd-home-gray-btns">
+                  <i class="fa fa-ellipsis-v" aria-hidden="true"></i></button
+              ></span>
+              <input class="form-control w-25" display="inline" placeholder="Search for Assignment"/>
+            </div>
+            <hr />
+            <div class="wd-list wd-assignment-table">
+              <ul class="list-group">
+                <li
+                  class="list-group-item list-group-item-secondary py-3"
+                  style="border-left: none"
+                >
+                  <span class="float-end">
+                    <span class="badge badge-pill badge-light" style="border:solid 1px black;color:black;">40% of Total</span>
+                    <i class="fa-solid fa-plus mx-3"></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
+                  >Assignments
+                </li>
+                <li class="list-group-item">
+                  <div class="row align-items-center">
+                      <i class="fa-solid fa-grip-vertical col-auto"></i>
+                    <i class="fa-solid fa-file-pen col-auto"
+                    style="color:green;"></i>
+                    <div class="col">
+                      <label><a href="../Assignments/edit.html" style="text-decoration: none; color:black">A1 SETUP</a></label>
+                      <p>
+                        Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022) Module |
+                      </br>
+                        Due Sep 18, 2022 at 11:59pm | 100 pts
+                      </p>
+                    </div>
+                    <div class="col-auto">
+                      <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
+                  >
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row align-items-center">
+                      <i class="fa-solid fa-grip-vertical col-auto"></i>
+                    <i class="fa-solid fa-file-pen col-auto"
+                    style="color:green;"></i>
+                    <div class="col">
+                      <label><a href="../Assignments/edit.html" style="text-decoration: none; color:black">A2 HTML</a></label>
+                      <p>
+                        Week 1 - HTML - Week starting on Monday September 12th (9/12/2022) Module |
+                      </br>
+                        Due Sep 25, 2022 at 11:59pm | 100 pts
+                      </p>
+                    </div>
+                    <div class="col-auto">
+                      <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
+                  >
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row align-items-center">
+                      <i class="fa-solid fa-grip-vertical col-auto"></i>
+                    <i class="fa-solid fa-file-pen col-auto"
+                    style="color:green;"></i>
+                    <div class="col">
+                      <label><a href="../Assignments/edit.html" style="text-decoration: none; color:black">A3 CSS</a></label>
+                      <p>
+                        Week 2 - CSS - Week starting on Monday September 19th (9/19/2022) Module |
+                      </br>
+                        Due Oct 2, 2022 at 11:59pm | 100 pts
+                      </p>
+                    </div>
+                    <div class="col-auto">
+                      <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
+                  >
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row align-items-center">
+                      <i class="fa-solid fa-grip-vertical col-auto"></i>
+                    <i class="fa-solid fa-file-pen col-auto"
+                    style="color:green;"></i>
+                    <div class="col">
+                      <label><a href="../Assignments/edit.html" style="text-decoration: none; color:black">A4 BOOTSTRAP</a></label>
+                      <p>
+                        Week 3 - Bootstrap - Week starting on Monday September 26th (9/26/2022) Module |
+                      </br>
+                        Due Oct 10, 2022 at 11:59pm | 100 pts
+                      </p>
+                    </div>
+                    <div class="col-auto">
+                      <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
+                  >
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row align-items-center">
+                      <i class="fa-solid fa-grip-vertical col-auto"></i>
+                    <i class="fa-solid fa-file-pen col-auto"
+                    style="color:green;"></i>
+                    <div class="col">
+                      <label><a href="../Assignments/edit.html" style="text-decoration: none; color:black">A5 JAVASCRIPT</a></label>
+                      <p>
+                        Week 4 - JavaScript - Week starting on Monday October 3rd (10/3/2022) Module |
+                      </br>
+                        Due Oct 16, 2022 at 11:59pm | 100 pts
+                      </p>
+                    </div>
+                    <div class="col-auto">
+                      <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
+                  >
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row align-items-center">
+                      <i class="fa-solid fa-grip-vertical col-auto"></i>
+                    <i class="fa-solid fa-file-pen col-auto"
+                    style="color:green;"></i>
+                    <div class="col">
+                      <label><a href="../Assignments/edit.html" style="text-decoration: none; color:black">A6 REACT</a></label>
+                      <p>
+                        Week 5 - React & Routing - Week starting on Monday October 10th (10/10/2022) Module |
+                      </br>
+                        Due Oct 23, 2022 at 11:59pm | 100 pts
+                      </p>
+                    </div>
+                    <div class="col-auto">
+                      <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
+                  >
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

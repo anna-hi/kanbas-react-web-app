@@ -1,118 +1,771 @@
 <!DOCTYPE html>
 <html lang="en">
-   <table width ="100%">
-      <thead></thead>
-      <tbody>
-         <tr>
-            <td valign="top">
-               <ul>
-                  <li><a href ="../../Account/AccountNavigation/index.html">Account</a></li>
-                  <li><a href ="#">Dashboard</a></li>
-                  <li><a href ="../CourseNavigation/index.html">Courses</a></li>
-                  <li><a href ="#">Calendar</a></li>
-                  <li><a href ="#">Inbox</a></li>
-                  <li><a href ="#">History</a></li>
-                  <li><a href ="#">Studio</a></li>
-                  <li><a href ="#">Commons</a></li>
-                  <li><a href ="#">Help</a></li>
-               </ul>
-            </td> 
-            <td valign="top">
-               <ul>
-                  <li><a href ="../Home/home.html">Home</a></li>
-                  <li><a href ="#">Modules</a></li>
-                  <li><a href ="#">Piazza</a></li>
-                  <li><a href ="#">Zoom Meetings</a></li>
-                  <li><a href ="../Assignments/index.html">Assignments</a></li>
-                  <li><a href ="#">Quizzes</a></li>
-                  <li><a href ="../Grades/index.html">Grades</a></li>
-                  <li><a href ="#">People</a></li>
-                  <li><a href ="#">Panopto Video</a></li>
-                  <li><a href ="#">Discussions</a></li>
-                  <li><a href ="#">Announcements</li>
-                  <li><a href ="#">Pages</a></li>
-                  <li><a href ="#">Files</a></li>
-                  <li><a href ="#">Rubrics</a></li>
-                  <li><a href ="#">Outcomes</a></li>
-                  <li><a href ="#">Collaborations</a></li>
-                  <li><a href ="#">Syllabus</a></li>
-                  <li><a href ="#">Settings</a></li>
-               </ul>
-            </td>
-            <td>
-               <button>Collapse All</button>
-               <button>View Progress</button>
-               <select id="select-one">
-                  <option selected value="Publish All">
-                      Publish All</option>
-               </select>
-               <button>Module</button>
-               <ul>
-                  <li>Week 0 - INTRO</li>
-                     <ul>
-                        <li>LEARING OBJECTIVES</li>
-                           <ul>
-                              <li>Introduction to the course</li>
-                              <li>Learn what is Web Development</li>
-                              <li>Creating a development environment</li>
-                              <li>Creating a Web Application</li>
-                              <li>Getting started with the 1st assignment</li>
-                           </ul>
-                        <li>READING</li>
-                        <ul>
-                           <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                           <li>Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML</li>
-                        </ul>
-                        <li>SLIDES</li>
-                        <ul>
-                           <li><a href="#">Introduction to Web Development Links to an external site.</a></li>
-                           <li><a href="#">Creating an HTTP server with Node.js Links to an external site.</a></li>
-                           <li><a href="#">Creating a React Application Links to an external site.</a></li>
-                        </ul>
-                     </ul>
-                  <li>Week 1 - HTML</li>
-                  <ul>
-                     <li>LEARNING OBJECTIVES</li>
-                     <ul>
-                        <li>Learn how to create user interfaces with HTML</li>
-                        <li>Keep working on assignment 1</li>
-                        <li>Deploy the assignment to Netlify</li>
-                     </ul>
-                     <li>READING</li>
-                     <ul>
-                        <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                        <li>Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML</li>
-                     </ul>
-                  </ul>
-               </ul>
-            </td>
-            <td>
-               <h2>Course Status</h2>
-               <button>Unpublish</button>
-               <button>Published</button>
-               <ul>
-                  <li><a href="#">Import Existing Content</a></li>
-                  <li><a href="#">Import From Commons</a></li>
-                  <li><a href="#">Choose Home Page</a></li>
-                  <li><a href="#">View Course Stream</a></li>
-                  <li><a href="#">New Announcement</a></li>
-                  <li><a href="#">New Analytics</a></li>
-                  <li><a href="#">View Course Notifications</a></li>
-               </ul>
-               <h2>Comming up</h2>
-               <a href="#">View Calendar</a>
-               <ul>
-                  <li><a href="#">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
-                  <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at 11:45am</a></li>
-                  <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li>
-               </ul>
-            </td>
-         </tr>
-      </tbody>
-      <tfoot></tfoot>
-   </table>
-<head>
-   <meta charset="UTF-8">
-   <title>Title</title>
-</head>
+  <head>
+    <link
+      href="../../../vendors/Bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="../../KanbasNavigation/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css"
+      rel="stylesheet"
+    />
+
+  </head>
+  <body>
+    <div class="wd-flex-row-container">
+      <div class="wd-kanbas-navigator">
+        <ul style="padding-left: 0%">
+          <li>
+            <a href="#" class="wd-not-selected-item">
+              <div>
+                <img src="../../NU-logo.png" width="75px" height="75px" />
+              </div>
+            </a>
+          </li>
+          <li class="wd-account">
+            <a href="../../Account/Profile/index.html">
+              <div>
+                <i class="bi bi-person-circle"></i>
+              </div>
+              Account</a
+            >
+          </li>
+          <li>
+            <a href="../../Dashboard/index.html" class="wd-not-selected-item">
+              <div>
+                <i class="bi bi-speedometer2"></i>
+              </div>
+              <div class="menu-item_text">Dashboard</div></a
+            >
+          </li>
+          <li>
+            <a
+              href="../Home/home.html"
+              class="wd-selected-item"
+            >
+              <div>
+                <i class="bi bi-journals"></i>
+              </div>
+              Courses</a
+            >
+          </li>
+          <li>
+            <a href="#" class="wd-not-selected-item">
+              <div>
+                <i class="bi bi-calendar-week"></i>
+              </div>
+              Calendar</a
+            >
+          </li>
+          <li>
+            <a href="#" class="wd-not-selected-item">
+              <div>
+                <i class="bi bi-envelope-open"></i>
+              </div>
+              Inbox</a
+            >
+          </li>
+          <li>
+            <a href="#" class="wd-not-selected-item">
+              <div>
+                <i class="bi bi-clock"></i>
+              </div>
+              History</a
+            >
+          </li>
+          <li>
+            <a href="#" class="wd-not-selected-item">
+              <div>
+                <i class="bi bi-play-btn"></i>
+              </div>
+              Studio</a
+            >
+          </li>
+          <li>
+            <a href="#" class="wd-not-selected-item">
+              <div>
+                <i class="bi bi-arrow-right-circle"></i>
+              </div>
+              Commons</a
+            >
+          </li>
+          <li>
+            <a href="#" class="wd-not-selected-item">
+              <div>
+                <i class="bi bi-question-circle"></i>
+              </div>
+              Help</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="wd-flex-grow-1 container-fluid">
+        <div class="wd-header row">
+          <i class="fa-solid fa-bars col-auto"></i>
+          <nav
+            class="col"
+            style="--bs-breadcrumb-divider: '>'; margin-bottom: 0px"
+            aria-label="breadcrumb"
+          >
+            <ol class="breadcrumb" style="margin-bottom: 0px">
+              <li class="breadcrumb-item">
+                <a href="#">CS45510.12631.202410</a>
+              </li>
+              <li
+                class="breadcrumb-item active"
+                aria-current="page"
+                style="font-size: 18px"
+              >
+                Modules
+              </li>
+            </ol>
+          </nav>
+          <button
+            type="button"
+            class="btn btn-secondary col-auto"
+            style="align-items: center"
+          >
+            <i class="fa-solid fa-glasses" styel="color:black;"></i> Student
+            View
+          </button>
+          <hr />
+        </div>
+        <div class="d-flex flex-row col-auto">
+          <div class="wd-profile-navigator override-bs col-auto">
+            <h6>202410_1 Fall 2023 Semest...</h6>
+            <ul class="override-bs">
+              <li class="wd-account-selected-item">
+                <a href="#">Home</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">Modules</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">Piazza</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">Zoom Meetings</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="../Assignments/index.html">Assignments</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">Quizzzes</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">Grades</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">People</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">Panopoto Video</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">
+                  <span class="float-end">
+                    <i
+                      class="fa-regular fa-eye-slash"
+                      style="color: grey"
+                    ></i> </span
+                  >Discussions</a
+                >
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">
+                  <span class="float-end">
+                    <i
+                      class="fa-regular fa-eye-slash"
+                      style="color: grey"
+                    ></i> </span
+                  >Announcements</a
+                >
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">
+                  <span class="float-end">
+                    <i
+                      class="fa-regular fa-eye-slash"
+                      style="color: grey"
+                    ></i> </span
+                  >Page</a
+                >
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">
+                  <span class="float-end">
+                    <i
+                      class="fa-regular fa-eye-slash"
+                      style="color: grey"
+                    ></i> </span
+                  >Files</a
+                >
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">
+                  <span class="float-end">
+                    <i
+                      class="fa-regular fa-eye-slash"
+                      style="color: grey"
+                    ></i> </span
+                  >Rubrics</a
+                >
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">
+                  <span class="float-end">
+                    <i
+                      class="fa-regular fa-eye-slash"
+                      style="color: grey"
+                    ></i> </span
+                  >Outcomes</a
+                >
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">
+                  <span class="float-end">
+                    <i
+                      class="fa-regular fa-eye-slash"
+                      style="color: grey"
+                    ></i> </span
+                  >Collaborations</a
+                >
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">
+                  <span class="float-end">
+                    <i
+                      class="fa-regular fa-eye-slash"
+                      style="color: grey"
+                    ></i> </span
+                  >Syllabus</a
+                >
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">Progress Reports (EAB Navigate)</a>
+              </li>
+              <li class="wd-account-not-selected-item">
+                <a href="#">Settings</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col wd-columns">
+            <div class="text-end text-nowrap">
+              <button class="wd-home-gray-btns btn-secondary">
+                Collapse All
+              </button>
+              <button class="wd-home-gray-btns btn-secondary">
+                View Progress
+              </button>
+              <button
+                class="btn wd-home-gray-btns dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa-regular fa-circle-check" style="color: green"></i>
+                Publish All
+              </button>
+              <button class="wd-add-module-btn btn-danger">
+                <i class="fa-solid fa-plus"></i>
+                Module
+              </button>
+              <button class="wd-home-gray-btns">
+                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+              </button>
+              <hr />
+            </div>
+            <div class="wd-list">
+              <ul class="list-group">
+                <li
+                  class="list-group-item list-group-item-secondary py-3"
+                  style="border-left: none"
+                >
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-1"
+                      style="color: green"
+                    ></i>
+                    <i class="fa-solid fa-plus mx-3"></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <span class="float-start pe-3">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  Week 0 - INTRO
+                </li>
+                <li class="list-group-item py-3">
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i> </span
+                  >LEARNING OBJECTIVES
+                </li>
+                <li class="list-group-item py-3">
+                  <span class="float-start">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <div class="ps-5">Introduction to the Course</div>
+                </li>
+                <li class="list-group-item py-3">
+                  <span class="float-start">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <div class="ps-5">Learn what is Web Development</div>
+                </li>
+                <li class="list-group-item py-3">
+                  <span class="float-start">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <div class="ps-5">Creating a development environment</div>
+                </li>
+                <li class="list-group-item py-3">
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
+                  >READING
+                </li>
+                <li class="list-group-item py-3">
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <div class="ps-5">
+                    Full Stack Developer - Chapter 1 - Introduction
+                  </div>
+                </li>
+                <li class="list-group-item py-3">
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <div class="ps-5">
+                    Full Stack Developer - Chapter 2 - Creating User Interfaces
+                    With HTML
+                  </div>
+                </li>
+                <li class="list-group-item py-3">
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
+                  >SLIDES
+                </li>
+                <li class="list-group-item wd-course-links" py-3>
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <i class="bi bi-link-45deg" style="color: green"></i>
+                  <a href="#"
+                    >Introduction to Web Development
+                    <i class="bi bi-folder-symlink"></i
+                  ></a>
+                </li>
+                <li class="list-group-item wd-course-links" py-3>
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <i class="bi bi-link-45deg" style="color: green"></i>
+                  <a href="#"
+                    >Creating an HTTP server with Node.js
+                    <i class="bi bi-folder-symlink"></i
+                  ></a>
+                </li>
+                <li class="list-group-item wd-course-links" py-3>
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <i class="bi bi-link-45deg" style="color: green"></i>
+                  <a href="#"
+                    >Creating a React Application
+                    <i class="bi bi-folder-symlink"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <div class="wd-list">
+              <ul class="list-group">
+                <li
+                  class="list-group-item list-group-item-secondary py-3"
+                  style="border-left: none"
+                >
+                  <span class="float-start pe-3">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-1"
+                      style="color: green"
+                    ></i>
+                    <i class="fa-solid fa-plus mx-3"></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
+                  >Week 1 - HTML
+                </li>
+                <li class="list-group-item py-3">
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i> </span
+                  >LEARNING OBJECTIVES
+                </li>
+                <li class="list-group-item py-3">
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <div class="ps-5">
+                    Learn how to create user interfaces with HTML
+                  </div>
+                </li>
+                <li class="list-group-item py-3">
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <div class="ps-5">Keep working on assignment 1</div>
+                </li>
+                <li class="list-group-item py-3">
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <div class="ps-5">Deploy the assignment to Netlify</div>
+                </li>
+                <li class="list-group-item py-3">
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
+                  >READING
+                </li>
+                <li class="list-group-item py-3">
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <div class="ps-5">
+                    Full Stack Developer - Chapter 1 - Introduction
+                  </div>
+                </li>
+                <li class="list-group-item py-3">
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <div class="ps-5">
+                    Full Stack Developer - Chapter 2 - Creating User Interfaces
+                    With HTML
+                  </div>
+                </li>
+                <li class="list-group-item py-3">
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
+                  >SLIDES
+                </li>
+                <li class="list-group-item wd-course-links" py-3>
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <i class="bi bi-link-45deg" style="color: green"></i>
+                  <a href="#"
+                    >Introduction to HTML and the DOM
+                    <i class="bi bi-folder-symlink"></i
+                  ></a>
+                </li>
+                <li class="list-group-item wd-course-links" py-3>
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <i class="bi bi-link-45deg" style="color: green"></i>
+                  <a href="#"
+                    >Formatting Web content with Headings and Paragraphs
+                    <i class="bi bi-folder-symlink"></i
+                  ></a>
+                </li>
+                <li class="list-group-item wd-course-links" py-3>
+                  <span class="float-start pe-2">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </span>
+                  <span class="float-end">
+                    <i
+                      class="fa-solid fa-circle-check mx-3"
+                      style="color: green"
+                    ></i>
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i
+                  ></span>
+                  <i class="bi bi-link-45deg" style="color: green"></i>
+                  <a href="#"
+                    >Creating a React Application
+                    <i class="bi bi-folder-symlink"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-auto wd-columns">
+            Course Status
+            <div
+              class="btn-toolbar py-2"
+              role="toolbar"
+              aria-label="Toolbar with button groups"
+            >
+              <div class="btn-group mr-2" role="group" aria-label="First group">
+                <button
+                  type="button"
+                  class="btn btn-secondary wd-home-gray-btns"
+                >
+                  <i class="fa-solid fa-ban" style="color: gray"></i> Unpublish
+                </button>
+                <button type="button" class="btn btn-success">
+                  <i
+                    class="fa-regular fa-circle-check"
+                    style="color: white"
+                  ></i>
+                  Publish
+                </button>
+              </div>
+            </div>
+            <div class="d-grid py-2">
+              <button
+                type="button"
+                class="btn btn-secondary wd-home-gray-btns mb-1"
+                style="text-align: left"
+              >
+                <i class="fa-solid fa-file-import"></i> Import Existing Content
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary wd-home-gray-btns mb-1"
+                style="text-align: left"
+              >
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Import from
+                Commons
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary wd-home-gray-btns mb-1"
+                style="text-align: left"
+              >
+                <i class="fa-solid fa-crosshairs"></i> Choose Home Page
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary wd-home-gray-btns mb-1"
+                style="text-align: left"
+              >
+                <i class="fa-solid fa-chart-simple"></i> View Course Stream
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary wd-home-gray-btns mb-1"
+                style="text-align: left"
+              >
+                <i class="fa-solid fa-bullhorn"></i> New Announcement
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary wd-home-gray-btns mb-1"
+                style="text-align: left"
+              >
+                <i class="fa-solid fa-chart-simple"></i> New Analytics
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary wd-home-gray-btns mb-1"
+                style="text-align: left"
+              >
+                <i class="fa-regular fa-bell"></i> View Course Notifications
+              </button>
+            </div>
+            <div class="wd-home-headers">
+              <h2>To Do</h2>
+            </div>
+            <div class="wd-action-lists">
+              <ul>
+                <li>
+                  <a href="#" style="color: red; text-decoration: none"
+                    >Grade A1 - ENV + HTML</a
+                  >
+                  <br />
+                  <label>100 points - Sep 18 at 11:59pm</label>
+                </li>
+              </ul>
+            </div>
+            <div class="wd-home-headers">
+              <h2>Coming Up</h2>
+            </div>
+            <div class="wd-action-lists">
+              <ul>
+                <li>
+                  <a href="#" style="color: red; text-decoration: none"
+                    >Lecture</a
+                  >
+                  <br />
+                  <label>CS45510.12631.202410</label>
+                  <br />
+                  <label>Sep 11 at 11:45am</label>
+                </li>
+                <li>
+                  <a href="#" style="color: red; text-decoration: none"
+                    >CS5610 06 SP23 Lecture</a
+                  >
+                  <br />
+                  <label>CS45510.12631.202410</label>
+                  <br />
+                  <label>Sep 11 at 6pm</label>
+                </li>
+                <li>
+                  <a href="#" style="color: red; text-decoration: none"
+                    >CS5610 Web Development <br />
+                    Summer 1 2023 - LECTURE
+                  </a>
+                  <br />
+                  <label>CS45510.12631.202410</label>
+                  <br />
+                  <label>Sep 11 at 7pm</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
