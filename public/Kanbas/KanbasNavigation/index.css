@@ -75,3 +75,48 @@ a:hover {
     color: gray;
     font-size: 36px;
 }
+
+.wd-profile-navigator {
+    display: block;
+    list-style-type: none;
+    padding-left: 24px;
+    padding-top: 24px;
+    padding-bottom: 72px;
+    padding-right: 12px;
+    text-decoration: none;
+    width: 195px;
+    height: fit-content;
+    position: sticky;
+    top: 1rem;
+  }
+
+ul.override-bs {
+    padding: 0px;
+}
+
+.wd-profile-navigator li {
+    padding-left: 0%;
+    list-style-type: none;
+    padding-left: 6px;
+}
+
+.wd-profile-navigator a {
+    text-decoration: none;
+    color: #a32424;
+}
+
+.wd-kanbas-nav-small {
+    color: white;
+    background-color: black;
+    padding: 16px;
+    margin-bottom: 24px;
+    min-height: 45px;
+    align-items: center;
+    position: sticky;
+    left: 0rem; 
+    right: 0rem;
+  }
+  
+  .wd-nav-small-text {
+    margin: auto;
+  }
