@@ -15,11 +15,30 @@
       href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css"
       rel="stylesheet"
     />
-
   </head>
   <body>
+    <div
+      class="wd-kanbas-nav-small d-flex flex-row d-md-none align-items-center"
+    >
+      <a href="../../KanbasNavigation/small-nav.html">
+        <button>
+          <i class="fa fa-bars"></i>
+        </button>
+      </a>
+      <div class="d-flex flex-row wd-nav-small-text justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <div>CS4550.12631.202410</div>
+          <div>Home</div>
+        </div>
+      </div>
+      <a href="../../KanbasNavigation/small-modules.html">
+        <button>
+          <i class="fa-solid fa-angle-down"></i>
+        </button>
+      </a>
+    </div>
     <div class="wd-flex-row-container">
-      <div class="wd-kanbas-navigator">
+      <div class="wd-kanbas-navigator d-none d-md-block">
         <ul style="padding-left: 0%">
           <li>
             <a href="#" class="wd-not-selected-item">
@@ -44,11 +63,8 @@
               <div class="menu-item_text">Dashboard</div></a
             >
           </li>
-          <li>
-            <a
-              href="../Home/home.html"
-              class="wd-selected-item"
-            >
+          <li class="wd-selected-item">
+            <a href="../Home/home.html">
               <div>
                 <i class="bi bi-journals"></i>
               </div>
@@ -107,38 +123,42 @@
       </div>
 
       <div class="wd-flex-grow-1 container-fluid">
-        <div class="wd-header row">
-          <i class="fa-solid fa-bars col-auto"></i>
-          <nav
-            class="col"
-            style="--bs-breadcrumb-divider: '>'; margin-bottom: 0px"
-            aria-label="breadcrumb"
-          >
-            <ol class="breadcrumb" style="margin-bottom: 0px">
-              <li class="breadcrumb-item">
-                <a href="#">CS45510.12631.202410</a>
-              </li>
-              <li
-                class="breadcrumb-item active"
-                aria-current="page"
-                style="font-size: 18px"
-              >
-                Modules
-              </li>
-            </ol>
-          </nav>
-          <button
-            type="button"
-            class="btn btn-secondary col-auto"
-            style="align-items: center"
-          >
-            <i class="fa-solid fa-glasses" styel="color:black;"></i> Student
-            View
-          </button>
-          <hr />
+        <div class="d-none d-md-block">
+          <div class="wd-header row">
+            <i class="fa-solid fa-bars col-auto"></i>
+            <nav
+              class="col"
+              style="--bs-breadcrumb-divider: '>'; margin-bottom: 0px"
+              aria-label="breadcrumb"
+            >
+              <ol class="breadcrumb" style="margin-bottom: 0px">
+                <li class="breadcrumb-item">
+                  <a href="#">CS45510.12631.202410</a>
+                </li>
+                <li
+                  class="breadcrumb-item active"
+                  aria-current="page"
+                  style="font-size: 18px"
+                >
+                  Home
+                </li>
+              </ol>
+            </nav>
+            <button
+              type="button"
+              class="btn btn-secondary col-auto"
+              style="align-items: center"
+            >
+              <i class="fa-solid fa-glasses" styel="color:black;"></i> Student
+              View
+            </button>
+            <hr />
+          </div>
         </div>
         <div class="d-flex flex-row col-auto">
-          <div class="wd-profile-navigator override-bs col-auto">
+          <div
+            class="wd-profile-navigator override-bs col-auto d-none d-md-block"
+          >
             <h6>202410_1 Fall 2023 Semest...</h6>
             <ul class="override-bs">
               <li class="wd-account-selected-item">
@@ -160,7 +180,7 @@
                 <a href="#">Quizzzes</a>
               </li>
               <li class="wd-account-not-selected-item">
-                <a href="#">Grades</a>
+                <a href="../Grades/grades.html">Grades</a>
               </li>
               <li class="wd-account-not-selected-item">
                 <a href="#">People</a>
@@ -257,7 +277,7 @@
             </ul>
           </div>
           <div class="col wd-columns">
-            <div class="text-end text-nowrap">
+            <div class="text-end">
               <button class="wd-home-gray-btns btn-secondary">
                 Collapse All
               </button>
@@ -459,7 +479,7 @@
                 </li>
               </ul>
             </div>
-            <div class="wd-list">
+            <div class="wd-list d-block">
               <ul class="list-group">
                 <li
                   class="list-group-item list-group-item-secondary py-3"
@@ -639,7 +659,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-auto wd-columns">
+          <div class="col-auto wd-columns d-none d-xl-block">
             Course Status
             <div
               class="btn-toolbar py-2"

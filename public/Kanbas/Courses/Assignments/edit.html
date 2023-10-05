@@ -1,123 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <table width="100%">
-    <thead></thead>
-    <tbody>
-      <tr>
-        <td valign="top">
-          <ul>
-            <li>
-              <a href="../../Account/AccountNavigation/index.html">Account</a>
-            </li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="../CourseNavigation/index.html">Courses</a></li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Inbox</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">Commons</a></li>
-            <li><a href="#">Help</a></li>
-          </ul>
-        </td>
-        <td valign="top">
-          <ul>
-            <li><a href="../Home/home.html">Home</a></li>
-            <li><a href="#">Modules</a></li>
-            <li><a href="#">Piazza</a></li>
-            <li><a href="#">Zoom Meetings</a></li>
-            <li><a href="../Assignments/index.html">Assignments</a></li>
-            <li><a href="#">Quizzes</a></li>
-            <li><a href="../Grades/index.html">Grades</a></li>
-            <li><a href="#">People</a></li>
-            <li><a href="#">Panopto Video</a></li>
-            <li><a href="#">Discussions</a></li>
-            <li><a href="#">Announcements</a></li>
-            <li><a href="#">Pages</a></li>
-            <li><a href="#">Files</a></li>
-            <li><a href="#">Rubrics</a></li>
-            <li><a href="#">Outcomes</a></li>
-            <li><a href="#">Collaborations</a></li>
-            <li><a href="#">Syllabus</a></li>
-            <li><a href="#">Settings</a></li>
-          </ul>
-        </td>
-        <td>
-          <select>
-            <option selected>SpeedGrader</option>
-          </select>
-          <hr />
-          <div>
-            <h3>Assignment Name</h3>
-            <input placeholder="A1 - ENV + HTML" />
-            <br /><br />
-          </div>
-          <textarea cols="40">This is the assignment description.</textarea>
-          <br /><br />
-          <div>
-            <label>Points</label> <br />
-            <input placeholder="100" />
-          </div>
-          <br /><br />
-          <label>Assignments</label> <br />
-          <select>
-            <option selected>ASSIGNMENTS</option>
-          </select>
-          <br /><br />
-          <label>Display Grade as</label> <br />
-          <select>
-            <option selected>Percentage</option>
-          </select>
-          <br /><br />
-          <label>Submission Type</label> <br />
-          <select>
-            <option selected>Online</option>
-          </select>
-          <br /><br />
-          <label>Online Entry Options</label><br />
-          <input type="checkbox" /> Text Entry <br />
-          <input id="url" type="checkbox" /> Website URL <br />
-          <input type="checkbox" /> Media Recordings <br />
-          <input type="checkbox" /> Student Annotation <br />
-          <input type="checkbox" /> File Uploads <br />
-          <br /><br />
-          <label>Submission Attempts</label> <br />
-          <select>
-            <option selected>Unlimited</option>
-          </select>
-          <br /><br />
-          <label>Plagarism Review</label> <br />
-          <select>
-            <option selected>None</option>
-          </select>
-          <br /><br />
-          <label>Group Assignment</label><br />
-          <input type="checkbox" /> This is a group assignment <br />
-          <br /><br />
-          <label>Peer Reviews</label><br />
-          <input type="checkbox" /> Require Peer Reviews <br />
-          <br />
-          <label>Assign</label><br />
-          <label>Assign to</label><br />
-          <input placeholder="Everyone" /> <br /><br />
-          <label> Due </label><br />
-          <input type="date" value="2021-01-01" /><br /><br />
-          <label> Available from </label><br />
-          <input type="date" value="2021-01-01" /><br /><br />
-          <label> Until </label><br />
-          <input type="date" value="2021-01-01" /><br /><br />
-          <form action="index.html">
-            <button>Cancel</button>
-            <button>Save</button>
-          </form>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Title</title>
-  </head>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -136,8 +16,28 @@
     />
   </head>
   <body>
+    <div
+    class="wd-kanbas-nav-small d-flex flex-row d-md-none align-items-center"
+  >
+    <a href="../../KanbasNavigation/small-nav.html">
+      <button>
+        <i class="fa fa-bars"></i>
+      </button>
+    </a>
+    <div class="d-flex flex-row wd-nav-small-text justify-content-center">
+      <div class="d-flex flex-column text-center">
+        <div>CS4550.12631.202410</div>
+        <div>Assignments</div>
+      </div>
+    </div>
+    <a href="../../KanbasNavigation/small-modules.html">
+      <button>
+        <i class="fa-solid fa-angle-down"></i>
+      </button>
+    </a>
+  </div>
     <div class="wd-flex-row-container">
-      <div class="wd-kanbas-navigator">
+      <div class="wd-kanbas-navigator d-none d-md-block">
         <ul style="padding-left: 0%">
           <li>
             <a href="#" class="wd-not-selected-item">
@@ -146,31 +46,31 @@
               </div>
             </a>
           </li>
-          <li class="wd-selected-item">
-            <a href="../Account/AccountNavigation/index.html">
-              <div>
+          <li>
+            <a
+              href="../../Account/Profile/index.html"
+              class="wd-not-selected-item"
+            >
+              <div class="wd-account-icon">
                 <i class="bi bi-person-circle"></i>
               </div>
               Account</a
             >
           </li>
           <li>
-            <a href="#" class="wd-not-selected-item">
+            <a href="../../Dashboard/index.html" class="wd-not-selected-item">
               <div>
                 <i class="bi bi-speedometer2"></i>
               </div>
               <div class="menu-item_text">Dashboard</div></a
             >
           </li>
-          <li>
-            <a
-              href="../Courses/CourseNavigation/index.html"
-              class="wd-not-selected-item"
-            >
+          <li class="wd-selected-item">
+            <a href="../Home/home.html">
               <div>
                 <i class="bi bi-journals"></i>
               </div>
-              Courses</a
+              <div>Courses</div></a
             >
           </li>
           <li>
@@ -224,45 +124,47 @@
         </ul>
       </div>
       <div class="wd-flex-grow-1 container-fluid">
-        <div class="wd-header row">
-          <i class="fa-solid fa-bars col-auto"></i>
-          <nav
-            class="col"
-            style="--bs-breadcrumb-divider: '>'; margin-bottom: 0px"
-            aria-label="breadcrumb"
-          >
-            <ol class="breadcrumb" style="margin-bottom: 0px">
-              <li class="breadcrumb-item">
-                <a href="#">CS45510.12631.202410</a>
-              </li>
-              <li
+        <div class="d-none d-md-block">
+          <div class="wd-header row">
+            <i class="fa-solid fa-bars col-auto"></i>
+            <nav
+              class="col"
+              style="--bs-breadcrumb-divider: '>'; margin-bottom: 0px"
+              aria-label="breadcrumb"
+            >
+              <ol class="breadcrumb" style="margin-bottom: 0px">
+                <li class="breadcrumb-item">
+                  <a href="#">CS45510.12631.202410</a>
+                </li>
+                <li
+                  class="breadcrumb-item active"
+                  aria-current="page"
+                  style="font-size: 18px"
+                >
+                  Assignments
+                </li>
+                <li
                 class="breadcrumb-item active"
                 aria-current="page"
                 style="font-size: 18px"
               >
-                Assignments
+                A1 - ENV + HTML
               </li>
-              <li
-              class="breadcrumb-item active"
-              aria-current="page"
-              style="font-size: 18px"
+              </ol>
+            </nav>
+            <button
+              type="button"
+              class="btn btn-secondary col-auto"
+              style="align-items: center"
             >
-              A1 - ENV + HTML
-            </li>
-            </ol>
-          </nav>
-          <button
-            type="button"
-            class="btn btn-secondary col-auto"
-            style="align-items: center"
-          >
-            <i class="fa-solid fa-glasses" styel="color:black;"></i> Student
-            View
-          </button>
-          <hr />
+              <i class="fa-solid fa-glasses" styel="color:black;"></i> Student
+              View
+            </button>
+            <hr />
+          </div>
         </div>
         <div class="d-flex flex-row col-auto">
-          <div class="wd-profile-navigator override-bs col-auto">
+          <div class="wd-profile-navigator override-bs col-auto d-none d-md-block">
             <h6>202410_1 Fall 2023 Semest...</h6>
             <ul class="override-bs">
               <li class="wd-account-not-selected-item">
@@ -284,7 +186,7 @@
                 <a href="#">Quizzzes</a>
               </li>
               <li class="wd-account-not-selected-item">
-                <a href="#">Grades</a>
+                <a href="../Grades/grades.html">Grades</a>
               </li>
               <li class="wd-account-not-selected-item">
                 <a href="#">People</a>
@@ -578,8 +480,10 @@ This assignment describes how to install the development environment for creatin
                     Do not count this assignment towards the final grade
                   </label>
                 </div>
-                <button class="wd-cancel-btn">Cancel</button>
-                <button class="wd-save-btn">Save</button>
+                <a href="index.html">
+                  <button class="wd-cancel-btn">Cancel</button>
+                  <button class="wd-save-btn">Save</button>
+                </a>
               </div>
             </div>
           </div>

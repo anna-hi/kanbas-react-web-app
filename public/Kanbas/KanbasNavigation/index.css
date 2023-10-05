@@ -1,7 +1,3 @@
-.a:hover {
-    color: inherit;
-}
-
 
 .wd-kanbas-navigator {
     background-color:black;
@@ -45,16 +41,37 @@
 
 .wd-kanbas-navigator i {
     color: red;
-    font-size: 25px;
+    font-size: 28px;
 }
 
 .wd-account-icon i {
     color:gray;
-    font-size:25px;
+    font-size:28px;
     text-align: center;
 }
 
 a:hover {
     text-decoration: underline;
     color: white;
+}
+
+.wd-small-nav a,
+.wd-small-nav a:hover {
+    color:red;
+    text-decoration: none;
+
+}
+
+.wd-small-nav i {
+    font-size: 36px;
+}
+
+.wd-small-nav label {
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+.wd-small-nav-account i {
+    color: gray;
+    font-size: 36px;
 }

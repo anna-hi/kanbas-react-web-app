@@ -1,9 +1,11 @@
 .wd-kanbas-navigator {
-    background-color:black;
-    color:red;
-    width:80px;
-    height:100%;
-    padding-top:10px;
+  background-color:black;
+  color:red;
+  width:80px;
+  height:100%;
+  padding-top:10px;
+  position: sticky;
+  top: 0rem;
 }
 
 .wd-kanbas-navigator a:hover {
@@ -18,6 +20,23 @@
     padding-bottom: 5px;
     
 }
+
+.wd-kanbas-nav-small {
+  color: white;
+  background-color: black;
+  padding: 16px;
+  margin-bottom: 24px;
+  min-height: 45px;
+  align-items: center;
+  position: sticky;
+  left: 0rem; 
+  right: 0rem;
+}
+
+.wd-nav-small-text {
+  margin: auto;
+}
+
 .wd-selected-item {
     box-sizing: border-box;
     position: relative;
@@ -57,7 +76,7 @@
 }
 
 .wd-account-icon i {
-    color:gray;
+    color:white;
     font-size:28px;
     text-align: center;
 }

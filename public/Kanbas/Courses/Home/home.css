@@ -2,7 +2,7 @@
   background-color: black;
   color: red;
   width: 80px;
-  min-height: 100%;
+ height: 100%;
   padding-top: 10px;
   position: sticky;
   top: 0rem;
@@ -19,6 +19,22 @@
   text-decoration: none;
   color: white;
 }
+
+.wd-kanbas-nav-small {
+  color: white;
+  background-color: black;
+  padding: 16px;
+  margin-bottom: 24px;
+  min-height: 45px;
+  align-items: center;
+  position: sticky;
+  left: 0rem; 
+  right: 0rem;
+}
+
+.wd-nav-small-text {
+  margin: auto;
+}
 .wd-selected-item {
   box-sizing: border-box;
   position: relative;
@@ -31,7 +47,7 @@
 }
 
 .wd-selected-item a:hover {
-  color: red;
+  color: red !important;
   text-decoration: none;
 }
 
@@ -160,7 +176,8 @@ ul.override-bs {
   color: #b52828;
 }
 
-.wd-header a {
+.wd-header a,
+.wd-header a:hover {
   color: #b52828;
   font-size: 18px;
   text-decoration: none;

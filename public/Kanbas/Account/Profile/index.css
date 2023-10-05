@@ -90,17 +90,16 @@
 .wd-profile-navigator {
     display: block;
     list-style-type: none;
-    padding-left:24px;
+    padding-left: 24px;
     padding-top: 24px;
-    padding-bottom:72px;
-    padding-right:12px;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    padding-bottom: 72px;
+    padding-right: 12px;
     text-decoration: none;
-    color:red;
     width: 195px;
-}
+    height: fit-content;
+    position: sticky;
+    top: 1rem;
+  }
 
 ul.override-bs {
     padding: 0px;

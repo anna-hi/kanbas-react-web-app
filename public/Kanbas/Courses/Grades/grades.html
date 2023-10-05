@@ -5,7 +5,7 @@
       href="../../../vendors/Bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assignments.css" />
+    <link rel="stylesheet" href="grades.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
@@ -27,7 +27,7 @@
     <div class="d-flex flex-row wd-nav-small-text justify-content-center">
       <div class="d-flex flex-column text-center">
         <div>CS4550.12631.202410</div>
-        <div>Assignments</div>
+        <div>Grades</div>
       </div>
     </div>
     <a href="../../KanbasNavigation/small-modules.html">
@@ -141,7 +141,7 @@
                   aria-current="page"
                   style="font-size: 18px"
                 >
-                  Assignments
+                  Grades
                 </li>
               </ol>
             </nav>
@@ -172,14 +172,14 @@
               <li class="wd-account-not-selected-item">
                 <a href="#">Zoom Meetings</a>
               </li>
-              <li class="wd-account-selected-item">
-                <a href="#">Assignments</a>
+              <li class="wd-account-not-selected-item">
+                <a href="../Assignments/index.html">Assignments</a>
               </li>
               <li class="wd-account-not-selected-item">
                 <a href="#">Quizzzes</a>
               </li>
-              <li class="wd-account-not-selected-item">
-                <a href="../Grades/grades.html">Grades</a>
+              <li class="wd-account-selected-item">
+                <a href="#">Grades</a>
               </li>
               <li class="wd-account-not-selected-item">
                 <a href="#">People</a>
@@ -276,176 +276,91 @@
             </ul>
           </div>
           <div class="col wd-columns">
-            <div class="text-nowrap">
-              <span class="float-end">
-                <button class="wd-home-gray-btns btn-secondary">
-                  <i class="fa-solid fa-plus"></i>
-                  Group
-                </button>
-                <button class="wd-add-module-btn btn-danger">
-                  <i class="fa-solid fa-plus"></i>
-                  Assignment
-                </button>
-                <button class="wd-home-gray-btns">
-                  <i class="fa fa-ellipsis-v" aria-hidden="true"></i></button
-              ></span>
-              <input class="form-control w-25" display="inline" placeholder="Search for Assignment"/>
+            <div class="text-end text-nowrap">
+              <button class="wd-home-gray-btns btn-secondary">
+                <i class="fa-solid fa-file-import"></i>
+                Import
+              </button>
+              <button
+                class="btn wd-home-gray-btns dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa-solid fa-file-export"></i>
+                Export
+              </button>
+              <button class="wd-home-gray-btns">
+                <i class="fa-solid fa-gear"></i>
+              </button>
             </div>
-            <hr />
-            <div class="wd-list wd-assignment-table">
-              <ul class="list-group">
-                <li
-                  class="list-group-item list-group-item-secondary py-3"
-                  style="border-left: none"
-                >
-                  <span class="float-end">
-                    <span class="badge badge-pill badge-light" style="border:solid 1px black;color:black;">40% of Total</span>
-                    <i class="fa-solid fa-plus mx-3"></i>
-                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
-                  >
-                  <span class="float-start pe-3">
-                    <i class="fa-solid fa-grip-vertical"></i>
-                  </span>Assignments
-                </li>
-                <li class="list-group-item">
-                  <div class="row align-items-center">
-                      <i class="fa-solid fa-grip-vertical col-auto"></i>
-                    <i class="fa-solid fa-file-pen col-auto"
-                    style="color:green;"></i>
-                    <div class="col">
-                      <label><a href="../Assignments/edit.html" style="text-decoration: none; color:black">A1 SETUP</a></label>
-                      <p>
-                        Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022) Module |
-                      </br>
-                        Due Sep 18, 2022 at 11:59pm | 100 pts
-                      </p>
-                    </div>
-                    <div class="col-auto">
-                      <i
-                      class="fa-solid fa-circle-check mx-3"
-                      style="color: green"
-                    ></i>
-                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
-                  >
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item">
-                  <div class="row align-items-center">
-                      <i class="fa-solid fa-grip-vertical col-auto"></i>
-                    <i class="fa-solid fa-file-pen col-auto"
-                    style="color:green;"></i>
-                    <div class="col">
-                      <label><a href="../Assignments/edit.html" style="text-decoration: none; color:black">A2 HTML</a></label>
-                      <p>
-                        Week 1 - HTML - Week starting on Monday September 12th (9/12/2022) Module |
-                      </br>
-                        Due Sep 25, 2022 at 11:59pm | 100 pts
-                      </p>
-                    </div>
-                    <div class="col-auto">
-                      <i
-                      class="fa-solid fa-circle-check mx-3"
-                      style="color: green"
-                    ></i>
-                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
-                  >
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item">
-                  <div class="row align-items-center">
-                      <i class="fa-solid fa-grip-vertical col-auto"></i>
-                    <i class="fa-solid fa-file-pen col-auto"
-                    style="color:green;"></i>
-                    <div class="col">
-                      <label><a href="../Assignments/edit.html" style="text-decoration: none; color:black">A3 CSS</a></label>
-                      <p>
-                        Week 2 - CSS - Week starting on Monday September 19th (9/19/2022) Module |
-                      </br>
-                        Due Oct 2, 2022 at 11:59pm | 100 pts
-                      </p>
-                    </div>
-                    <div class="col-auto">
-                      <i
-                      class="fa-solid fa-circle-check mx-3"
-                      style="color: green"
-                    ></i>
-                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
-                  >
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item">
-                  <div class="row align-items-center">
-                      <i class="fa-solid fa-grip-vertical col-auto"></i>
-                    <i class="fa-solid fa-file-pen col-auto"
-                    style="color:green;"></i>
-                    <div class="col">
-                      <label><a href="../Assignments/edit.html" style="text-decoration: none; color:black">A4 BOOTSTRAP</a></label>
-                      <p>
-                        Week 3 - Bootstrap - Week starting on Monday September 26th (9/26/2022) Module |
-                      </br>
-                        Due Oct 10, 2022 at 11:59pm | 100 pts
-                      </p>
-                    </div>
-                    <div class="col-auto">
-                      <i
-                      class="fa-solid fa-circle-check mx-3"
-                      style="color: green"
-                    ></i>
-                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
-                  >
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item">
-                  <div class="row align-items-center">
-                      <i class="fa-solid fa-grip-vertical col-auto"></i>
-                    <i class="fa-solid fa-file-pen col-auto"
-                    style="color:green;"></i>
-                    <div class="col">
-                      <label><a href="../Assignments/edit.html" style="text-decoration: none; color:black">A5 JAVASCRIPT</a></label>
-                      <p>
-                        Week 4 - JavaScript - Week starting on Monday October 3rd (10/3/2022) Module |
-                      </br>
-                        Due Oct 16, 2022 at 11:59pm | 100 pts
-                      </p>
-                    </div>
-                    <div class="col-auto">
-                      <i
-                      class="fa-solid fa-circle-check mx-3"
-                      style="color: green"
-                    ></i>
-                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
-                  >
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item">
-                  <div class="row align-items-center">
-                      <i class="fa-solid fa-grip-vertical col-auto"></i>
-                    <i class="fa-solid fa-file-pen col-auto"
-                    style="color:green;"></i>
-                    <div class="col">
-                      <label><a href="../Assignments/edit.html" style="text-decoration: none; color:black">A6 REACT</a></label>
-                      <p>
-                        Week 5 - React & Routing - Week starting on Monday October 10th (10/10/2022) Module |
-                      </br>
-                        Due Oct 23, 2022 at 11:59pm | 100 pts
-                      </p>
-                    </div>
-                    <div class="col-auto">
-                      <i
-                      class="fa-solid fa-circle-check mx-3"
-                      style="color: green"
-                    ></i>
-                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span
-                  >
-                    </div>
-                  </div>
-                </li>
-              </ul>
+            <div class="row" style="padding-top: 15px; padding-bottom: 15px">
+              <div class="col">
+                <h5>Student Names</h5>
+                <input
+                  class="form-control"
+                  type="dropdown"
+                  id="search-students"
+                  value="Search Students"
+                />
+              </div>
+              <div class="col">
+                <h5 class="text-nowrap">Assignment Names</h5>
+                <input
+                  class="form-control"
+                  type="dropdown"
+                  id="search-assignments"
+                  value="Search Assignments"
+                />
+              </div>
+            </div>
+            <button class="wd-home-gray-btns btn-secondary mb-3">
+              <i class="fa-solid fa-filter"></i></i>
+              Apply Filters
+            </button>
+            <div class="table-responsive">
+              <table class="table table-responsive table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <td>Student Name</td>
+                    <td >A1 Setup Out of 100</td>
+                    <td >A2 HTML Out of 100</td>
+                    <td >A3 CSS Out of 100</td>
+                    <td >A4 Bootstrap Out of 100</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="color:red">Hash Brown</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                  </tr>
+                  <tr>
+                    <td style="color:red">Smiley Potato</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                  </tr>
+                  <tr>
+                    <td style="color:red">French Fry</td>
+                    <td>100%</td>
+                    <td>
+                      <input class="form-control" type="number" value="78"/>
+                    </td>
+                    <td>100%</td>
+                    <td>100%</td>
+                  </tr>
+                  <tr>
+                    <td style="color:red">Mashed Potato</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>

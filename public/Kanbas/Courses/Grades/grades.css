@@ -1,0 +1,335 @@
+.wd-kanbas-navigator {
+    background-color: black;
+    color: red;
+    width: 80px;
+    height: 100%;
+    padding-top: 10px;
+    position: sticky;
+    top: 0rem;
+  }
+  
+  .wd-kanbas-navigator li {
+    padding-left: 0%;
+    list-style-type: none;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+  }
+  
+  .wd-kanbas-navigator a:hover {
+    text-decoration: none;
+    color: white;
+  }
+
+  .wd-kanbas-nav-small {
+    color: white;
+    background-color: black;
+    padding: 16px;
+    margin-bottom: 24px;
+    min-height: 45px;
+    align-items: center;
+    position: sticky;
+    left: 0rem; 
+    right: 0rem;
+  }
+  
+  .wd-nav-small-text {
+    margin: auto
+}
+  .wd-selected-item {
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    display: block;
+    border-style: none;
+    background-color: white;
+    text-decoration: none;
+    color: red;
+  }
+  
+  .wd-selected-item a:hover {
+    color: red;
+    text-decoration: none;
+  }
+  
+  .wd-not-selected-item {
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    display: block;
+    border-style: none;
+    text-decoration: none;
+    font-size: medium;
+    color: white;
+  }
+  
+  .wd-kanbas-navigator i {
+    color: red;
+    font-size: 28px;
+  }
+  
+  .wd-selected-item i {
+    color: red;
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .wd-selected-item a,
+  .wd-selected-item a:hover {
+    text-decoration: none;
+    color: red;
+  }
+  
+  .wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+  }
+  .wd-flex-grow-1 {
+    flex-grow: 1;
+  }
+  .wd-flex-grow-4 {
+    flex-grow: 4;
+  }
+  .wd-width-100px {
+    width: 100px;
+  }
+  
+  .wd-profile-navigator {
+    display: block;
+    list-style-type: none;
+    padding-left: 24px;
+    padding-top: 24px;
+    padding-bottom: 72px;
+    padding-right: 12px;
+    text-decoration: none;
+    width: 195px;
+    height: fit-content;
+    position: sticky;
+    top: 1rem;
+  }
+  
+  .wd-profile-navigator h6 {
+    font-size: 10px;
+    color: gray;
+  }
+  
+  ul.override-bs {
+    padding: 0px;
+  }
+  
+  .wd-profile-navigator li {
+    padding-left: 0%;
+    list-style-type: none;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+  }
+  
+  .wd-account-not-selected-item a {
+    text-decoration: none;
+    color: #a32424;
+  }
+  
+  .wd-account-not-selected-item a:hover {
+    text-decoration: underline;
+    color: #a32424;
+  }
+  
+  .wd-account-selected-item {
+    border-left: 2px solid;
+    color: black;
+  }
+  
+  .wd-account-selected-item a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .wd-account-selected-item a:hover {
+    text-decoration: underline;
+    color: black;
+  }
+  
+  .wd-header {
+    padding-left: 24px;
+    padding-top: 25px;
+  }
+  
+  .wd-header button {
+    background: #f5f5f5;
+    color: #2d3b45;
+    border: 1px solid;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    padding: 8px 10px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .wd-header i {
+    margin-right: 12px;
+    padding: 0;
+    font-size: 25px;
+    height: 30px;
+    color: #b52828;
+  }
+  
+  .wd-header a {
+    color: #b52828;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  .wd-home-gray-btns {
+    background: #f5f5f5;
+    color: #2d3b45;
+    border: 1px solid;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    padding: 8px 14px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .wd-add-module-btn {
+    color: #ffffff;
+    border: 1px solid;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    padding: 8px 14px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    text-shadow: none;
+  }
+  
+  .wd-list {
+    margin-top: 15px;
+    padding: 9px;
+  }
+  
+  .wd-list li {
+    border-left: 4px solid green;
+  }
+  
+  .wd-course-links a {
+    color: #a32424;
+    text-decoration: none;
+  }
+  
+  .wd-columns {
+    padding: 24px;
+  }
+  
+  .wd-home-headers h2 {
+    margin-top: 17px;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    border-bottom: 1px solid #c7cdd1;
+  }
+  
+  .wd-action-lists ul {
+    padding-left: 0;
+  }
+  
+  .wd-action-lists li {
+    list-style-type: none;
+    margin-bottom: 6px;
+  }
+  
+  .wd-action-lists label {
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .wd-assignment-table label {
+    font-weight: bold;
+  }
+  
+  .wd-assignment-table p {
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .wd-edit-assignment-form {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+  }
+  
+  .wd-edit-assignment-form select {
+    width: 220px;
+    display: inline-block;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    vertical-align: middle;
+  }
+  
+  .wd-bottom-edit-assign {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    border-top: 1px solid #e5e5e5;
+    text-align: right;
+    padding: 10px 10px 11px;
+    display: block;
+    margin-top: 20px;
+  }
+  
+  .wd-cancel-btn {
+    background: #f5f5f5;
+    color: #2d3b45;
+    border: 1px solid;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    padding: 8px 14px;
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .wd-save-btn {
+    background: #d41b2c;
+    color: #ffffff;
+    border: 1px solid;
+    border-color: #b51726;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    padding: 8px 14px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .wd-account-icon i {
+    color:white;
+    font-size:28px;
+    text-align: center;
+  }
