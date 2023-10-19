@@ -1,0 +1,422 @@
+.wd-kanbas-navigator {
+    background-color: black;
+    color: white;
+    width: 80px;
+    height: 100%;
+    padding-top: 10px;
+    position: sticky;
+    top: 0rem;
+    text-align: center;
+  }
+
+  .wd-kanbas-navigator .active {
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    display: block;
+    border-style: none;
+    background-color: white;
+    text-decoration: none;
+    color: red;
+  }
+  
+  .wd-kanbas-navigator a {
+    padding-left: 0%;
+    list-style-type: none;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+  }
+  
+  .wd-kanbas-navigator a:hover {
+    text-decoration: none;
+  }
+  
+  .wd-kanbas-nav-small {
+    color: white;
+    background-color: black;
+    padding: 16px;
+    margin-bottom: 24px;
+    min-height: 45px;
+    align-items: center;
+    position: sticky;
+    left: 0rem; 
+    right: 0rem;
+  }
+  
+  .wd-nav-small-text {
+    margin: auto;
+  }
+  .wd-selected-item {
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    display: block;
+    border-style: none;
+    background-color: white;
+    text-decoration: none;
+    color: red;
+  }
+  
+  .wd-selected-item a:hover {
+    color: red !important;
+    text-decoration: none;
+  }
+  
+  .wd-not-selected-item {
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    display: block;
+    border-style: none;
+    text-decoration: none;
+    font-size: medium;
+    color: white;
+  }
+  
+  .wd-kanbas-navigator i {
+    color: red;
+    font-size: 28px;
+  }
+  
+  .wd-selected-item i {
+    color: gray;
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .wd-selected-item a {
+    text-decoration: none;
+    color: red;
+  }
+  
+  .wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+  }
+  .wd-flex-grow-1 {
+    flex-grow: 1;
+  }
+  .wd-width-100px {
+    width: 100px;
+  }
+  
+  .wd-profile-navigator {
+    display: block;
+    list-style-type: none;
+    padding-left: 24px;
+    padding-top: 24px;
+    padding-bottom: 72px;
+    padding-right: 12px;
+    text-decoration: none;
+    width: 195px;
+    height: fit-content;
+    position: sticky;
+    top: 1rem;
+  }
+  
+  .wd-profile-navigator h6 {
+    font-size: 10px;
+    color: gray;
+  }
+  
+  ul.override-bs {
+    padding: 0px;
+  }
+  
+  .wd-profile-navigator li {
+    padding-left: 0%;
+    list-style-type: none;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+  }
+  
+  .wd-account-not-selected-item a {
+    text-decoration: none;
+    color: #a32424;
+  }
+  
+  .wd-account-not-selected-item a:hover {
+    text-decoration: underline;
+    color: #a32424;
+  }
+  
+  .wd-account-selected-item {
+    border-left: 2px solid;
+    color: black;
+  }
+  
+  .wd-account-selected-item a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .wd-account-selected-item a:hover {
+    text-decoration: underline;
+    color: black;
+  }
+  
+  .wd-header {
+    padding-left: 24px;
+    padding-top: 25px;
+  }
+  
+  .wd-header button {
+    background: #f5f5f5;
+    color: #2d3b45;
+    border: 1px solid;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    position: relative;
+    padding: 8px 10px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .wd-header i {
+    margin-right: 12px;
+    padding: 0;
+    font-size: 25px;
+    vertical-align: top;
+    color: #b52828;
+  }
+
+  .wd-header i:before {
+    vertical-align: top;
+  }
+
+  .wd-module-icons i {
+    padding-right: 5px;
+  }
+  .wd-header a,
+  .wd-header a:hover {
+    color: #b52828;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  .wd-home-gray-btns {
+    background: #f5f5f5;
+    color: #2d3b45;
+    border: 1px solid;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    padding: 8px 14px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .wd-add-module-btn {
+    color: #ffffff;
+    border: 1px solid;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    padding: 8px 14px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    text-shadow: none;
+  }
+  
+  .wd-list {
+    margin-top: 15px;
+    padding: 9px;
+  }
+  
+  .wd-list li {
+    border-left: 4px solid green;
+  }
+  
+  .wd-course-links a {
+    color: #a32424;
+    text-decoration: none;
+  }
+  
+  .wd-columns {
+    padding: 24px;
+  }
+  
+  .wd-home-headers h2 {
+    margin-top: 17px;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    border-bottom: 1px solid #c7cdd1;
+  }
+  
+  .wd-action-lists ul {
+    padding-left: 0;
+  }
+  
+  .wd-action-lists li {
+    list-style-type: none;
+    margin-bottom: 6px;
+  }
+  
+  .wd-action-lists label {
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .wd-account {
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    display: block;
+    border-style: none;
+    text-decoration: none;
+    font-size: medium;
+    color: white;
+  }
+  
+  .wd-account a, 
+  .wd-account a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .wd-account i {
+    color: white !important;
+  }
+  
+  .wd-dashboard-header {
+    /* padding-left: 24px; */
+    padding-top: 13px;
+  }
+
+  .wd-dashboard {
+    padding-left:34px;
+    padding-top:13px;
+  }
+
+  .wd-flex-grow-1 {
+    flex-grow: 1;
+  }
+
+  .wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .wd-card-container .card {
+    width: 262px;
+    padding: 0;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    align-items: right;
+  }
+
+  .wd-card-container a {
+    text-decoration: none;
+  }
+
+  .wd-card {
+    font-size: 14px;
+  }
+
+  .wd-card-subtext {
+    margin-top: -8px;
+    font-size: 12px;
+  }
+
+  .wd-card-icon {
+    font-size: 20px;
+  }
+
+  .wd-course-navigator {
+    display: block;
+    list-style-type: none;
+    padding-left: 24px;
+    padding-top: 24px;
+    padding-bottom: 72px;
+    padding-right: 12px;
+    text-decoration: none;
+    width: 195px;
+    height: fit-content;
+    position: sticky;
+    top: 1rem;
+  }
+
+  .wd-course-navigator a {
+    text-decoration: none;
+    color: #a32424;
+    list-style-type: none;
+    padding-left: 6px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+  }
+
+  .wd-course-navigator .active {
+    border-left: 2px solid;
+    color: black;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  .wd-list {
+    margin-top: 15px;
+    padding: 9px;
+  }
+  
+  .wd-list li {
+    border-left: 4px solid green;
+  }
+
+  .wd-home-gray-btns {
+    background: #f5f5f5;
+    color: #2d3b45;
+    border: 1px solid;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    padding: 8px 14px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .wd-add-module-btn {
+    color: #ffffff;
+    border: 1px solid;
+    border-color: #b52828;;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    padding: 8px 14px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+    background:#b52828;
+  }
+
+  .wd-action-lists a {
+    text-decoration: none;
+    color: red;
+  }
+
+  .wd-side-btns button {
+    text-align: left;
+  }
+  
+  
