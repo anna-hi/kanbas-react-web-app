@@ -409,14 +409,71 @@
     line-height: 20px;
     background:#b52828;
   }
+  .wd-red {
+    color:red !important;
+  }
 
-  .wd-action-lists a {
+  .wd-action-lists p {
     text-decoration: none;
     color: red;
   }
 
   .wd-side-btns button {
     text-align: left;
+  }
+
+  .wd-assignment-table label {
+    font-weight: bold;
+  }
+  
+  .wd-assignment-table p {
+    font-size: 14px;
+    color: gray;
+  }
+
+  .wd-badge {
+    border:solid 1px black;
+    color:black;
+    --bs-badge-color: #000;
+    --bs-badge-border-color:#000;
+    --bs-badge-border-radius: 1p;
+  }
+
+  .wd-published label {
+    color: green;
+    font-weight: bold;
+  }
+
+  .wd-cancel-btn {
+    background: #f5f5f5;
+    color: #2d3b45;
+    border: 1px solid;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    padding: 8px 14px;
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .wd-save-btn {
+    background: #d41b2c;
+    color: #ffffff;
+    border: 1px solid;
+    border-color: #b51726;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    padding: 8px 14px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
   }
   
   

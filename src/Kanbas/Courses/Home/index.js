@@ -1,7 +1,5 @@
 import ModuleList from "../Modules/ModuleList";
 import "../.././styles.css";
-import { HiOutlineBan } from "react-icons/hi";
-import { AiOutlineCheckCircle } from "react-icons/ai";
 
 function Home() {
   return (
@@ -81,10 +79,9 @@ function Home() {
         <div class="wd-action-lists">
           <ul>
             <li>
-              <a href="#" style={{}}>
+              <div className="wd-red">
                 Grade A1 - ENV + HTML
-              </a>
-              <br />
+              </div>
               <label>100 points - Sep 18 at 11:59pm</label>
             </li>
           </ul>
@@ -95,25 +92,22 @@ function Home() {
         <div class="wd-action-lists">
           <ul>
             <li>
-              <a href="#">Lecture</a>
-              <br />
+            <div className="wd-red">Lecture</div>
               <label>CS45510.12631.202410</label>
               <br />
               <label>Sep 11 at 11:45am</label>
             </li>
             <li>
-              <a href="#">CS5610 06 SP23 Lecture</a>
-              <br />
+            <div className="wd-red">CS5610 06 SP23 Lecture</div>
               <label>CS45510.12631.202410</label>
               <br />
               <label>Sep 11 at 6pm</label>
             </li>
             <li>
-              <a href="#">
+            <div className="wd-red">
                 CS5610 Web Development <br />
                 Summer 1 2023 - LECTURE
-              </a>
-              <br />
+              </div>
               <label>CS45510.12631.202410</label>
               <br />
               <label>Sep 11 at 7pm</label>

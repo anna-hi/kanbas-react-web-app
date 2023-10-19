@@ -1,15 +1,17 @@
 import db from "../../Kanbas/Database";
-import { Navigate, Routes, Route, useParams } from "react-router-dom";
+import { Navigate, Routes, Route, useParams, useLocation } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-import { FaBars } from "react-icons/fa6";
 import ".././styles.css";
+import AssignmentEditor from "./Assignments/AssignmentEditor";
 
 function Courses() {
   const { courseId } = useParams();
+  const { pathname } = useLocation();
+  const path = pathname.split("/").splice(4);
   const course = db.courses.find((course) => course._id === courseId);
   return (
     <div className="w-100 px-4">
@@ -20,7 +22,7 @@ function Courses() {
             <Breadcrumb.Item href="#">
               {course.number + 12631.20241}
             </Breadcrumb.Item>
-            <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
+            <Breadcrumb.Item href="#" active>{path}</Breadcrumb.Item>
           </Breadcrumb>
         </div>
 
@@ -37,7 +39,7 @@ function Courses() {
             <Route path="Assignments" element={<Assignments />} />
             <Route
               path="Assignments/:assignmentId"
-              element={<h1>Assignment Editor</h1>}
+              element={<AssignmentEditor />}
             />
             <Route path="Grades" element={<h1>Grades</h1>} />
           </Routes>
