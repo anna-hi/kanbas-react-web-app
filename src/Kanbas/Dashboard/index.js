@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import db from "../Database";
 import ".././styles.css";
 const dbPhoto = "/Kanbas/Dashboard/cobalt-blue.png";
+import { React, useState } from "react";
 
 function Dashboard() {
-  const courses = db.courses;
+  const [courses, setCourses] = useState(db.courses);
   return (
     <div className="wd-dashboard-header w-100 px-4">
       <h1 clasName="d-none d-md-block">Dashboard</h1>
