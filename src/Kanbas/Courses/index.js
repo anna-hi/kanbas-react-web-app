@@ -1,4 +1,3 @@
-import db from "../../Kanbas/Database";
 import { Navigate, Routes, Route, useParams, useLocation } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
@@ -8,11 +7,11 @@ import Breadcrumb from "react-bootstrap/Breadcrumb";
 import ".././styles.css";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
   const { pathname } = useLocation();
   const path = pathname.split("/").splice(4);
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   return (
     <div className="w-100 px-4">
       <div className="wd-header row">

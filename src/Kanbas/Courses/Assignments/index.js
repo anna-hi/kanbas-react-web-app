@@ -1,31 +1,52 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
-import db from "../../Database";
+import {useParams, useNavigate } from "react-router-dom";
+import {
+  addAssignment,
+  setAssignment,
+  deleteAssignment,
+} from "./assignmentsReducer";
+import { useDispatch, useSelector } from "react-redux";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
+  const assignment = useSelector(
+    (state) => state.assignmentsReducer.assignment
+  );
+  // const assignments = db.assignments;
+  const assignments = useSelector(
+    (state) => state.assignmentsReducer.assignments
+  );
+
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId
   );
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   return (
     <div>
-      <div class="text-nowrap">
-        <span class="float-end">
-          <button class="wd-home-gray-btns btn-secondary">
+      <div className="text-nowrap">
+        <span className="float-end">
+          <button className="wd-home-gray-btns btn-secondary">
             <i className="bi bi-plus-lg"></i>
             Group
           </button>
-          <button class="wd-add-module-btn btn-danger">
+          <button
+            className="wd-add-module-btn btn-danger"
+            onClick={(e) => {
+              dispatch(addAssignment({...assignment, course: courseId}));
+
+              navigate(`123`);
+            }}
+          >
             <i className="bi bi-plus-lg"></i>
             Assignment
           </button>
-          <button class="wd-home-gray-btns">
+          <button className="wd-home-gray-btns">
             <i className="bi bi-three-dots-vertical"></i>
           </button>
         </span>
         <input
-          class="form-control w-25"
+          className="form-control w-25"
           display="inline"
           placeholder="Search for Assignment"
         />
@@ -33,28 +54,40 @@ function Assignments() {
       <hr />
       <div className="list-group wd-list wd-assignment-table">
         <div className="list-group-item list-group-item-secondary py-3">
-          <span class="float-end">
-            <span
-              className="badge wd-badge"
-            >
-              40% of Total
-            </span>
-            <i class="fa-solid fa-plus mx-3"></i>
-            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          <span className="float-end">
+            <span className="badge wd-badge">40% of Total</span>
+            <i className="fa-solid fa-plus mx-3"></i>
+            <i className="fa fa-ellipsis-v" aria-hidden="true"></i>
           </span>
-          <span class="float-start pe-3">
-            <i class="fa-solid fa-grip-vertical"></i>
+          <span className="float-start pe-3">
+            <i className="fa-solid fa-grip-vertical"></i>
           </span>
           Assignments
         </div>
         {courseAssignments.map((assignment) => (
-          <Link
-            key={assignment._id}
-            to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-            className="list-group-item"
-          >
-            {assignment.title}
-          </Link>
+          <div key={assignment._id} className="list-group-item">
+            <div className="row">
+              <div
+                className="col"
+                onClick={() => {
+                  dispatch(setAssignment(assignment));
+                  navigate(
+                    `/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`
+                  );
+                }}
+              >
+                {assignment.title}
+              </div>
+              <div
+                className="wd-cursor-pointer col-auto"
+                onClick={(event) => {
+                  dispatch(deleteAssignment(assignment._id));
+                }}
+              >
+                <i className="bi bi-trash"></i>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
     </div>

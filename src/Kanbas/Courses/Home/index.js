@@ -7,76 +7,76 @@ function Home() {
       <div className="col">
         <ModuleList />
       </div>
-      <div class="col-auto wd-columns d-none d-xl-block">
+      <div className="col-auto wd-columns d-none d-xl-block">
         Course Status
         <div
-          class="btn-toolbar py-2"
+          className="btn-toolbar py-2"
           role="toolbar"
           aria-label="Toolbar with button groups"
         >
           <div
-            class="btn-group mr-2 wd-module-icons"
+            className="btn-group mr-2 wd-module-icons"
             role="group"
             aria-label="First group"
           >
-            <button type="button" class="btn btn-secondary wd-home-gray-btns">
-              <i class="bi bi-check-circle"></i>Unpublish
+            <button type="button" className="btn btn-secondary wd-home-gray-btns">
+              <i className="bi bi-check-circle"></i>Unpublish
             </button>
-            <button type="button" class="btn btn-success">
-              <i class="bi bi-ban"></i>
+            <button type="button" className="btn btn-success">
+              <i className="bi bi-ban"></i>
               Publish
             </button>
           </div>
         </div>
-        <div class="d-grid py-2 wd-side-btns">
+        <div className="d-grid py-2 wd-side-btns">
           <button
             type="button"
-            class="btn btn-secondary wd-home-gray-btns mb-1"
+            className="btn btn-secondary wd-home-gray-btns mb-1"
           >
-            <i class="bi bi-file-earmark-arrow-up-fill"></i> Import Existing
+            <i className="bi bi-file-earmark-arrow-up-fill"></i> Import Existing
             Content
           </button>
           <button
             type="button"
-            class="btn btn-secondary wd-home-gray-btns mb-1"
+            className="btn btn-secondary wd-home-gray-btns mb-1"
           >
-            <i class="bi bi-box-arrow-right"></i> Import from Commons
+            <i className="bi bi-box-arrow-right"></i> Import from Commons
           </button>
           <button
             type="button"
-            class="btn btn-secondary wd-home-gray-btns mb-1"
+            className="btn btn-secondary wd-home-gray-btns mb-1"
           >
-            <i class="bi bi-crosshair"></i> Choose Home Page
+            <i className="bi bi-crosshair"></i> Choose Home Page
           </button>
           <button
             type="button"
-            class="btn btn-secondary wd-home-gray-btns mb-1"
+            className="btn btn-secondary wd-home-gray-btns mb-1"
           >
-            <i class="bi bi-bar-chart-fill"></i> View Course Stream
+            <i className="bi bi-bar-chart-fill"></i> View Course Stream
           </button>
           <button
             type="button"
-            class="btn btn-secondary wd-home-gray-btns mb-1"
+            className="btn btn-secondary wd-home-gray-btns mb-1"
           >
-            <i class="bi bi-megaphone-fill"></i> New Announcement
+            <i className="bi bi-megaphone-fill"></i> New Announcement
           </button>
           <button
             type="button"
-            class="btn btn-secondary wd-home-gray-btns mb-1"
+            className="btn btn-secondary wd-home-gray-btns mb-1"
           >
-            <i class="bi bi-bar-chart-fill"></i> New Analytics
+            <i className="bi bi-bar-chart-fill"></i> New Analytics
           </button>
           <button
             type="button"
-            class="btn btn-secondary wd-home-gray-btns mb-1"
+            className="btn btn-secondary wd-home-gray-btns mb-1"
           >
-            <i class="bi bi-bell"></i> View Course Notifications
+            <i className="bi bi-bell"></i> View Course Notifications
           </button>
         </div>
-        <div class="wd-home-headers">
+        <div className="wd-home-headers">
           <h2>To Do</h2>
         </div>
-        <div class="wd-action-lists">
+        <div className="wd-action-lists">
           <ul>
             <li>
               <div className="wd-red">
@@ -89,7 +89,7 @@ function Home() {
         <div className="wd-home-headers">
           <h2>Coming Up</h2>
         </div>
-        <div class="wd-action-lists">
+        <div className="wd-action-lists">
           <ul>
             <li>
             <div className="wd-red">Lecture</div>

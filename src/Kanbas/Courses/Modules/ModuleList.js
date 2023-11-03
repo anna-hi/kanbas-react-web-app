@@ -1,10 +1,19 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import db from "../../Database";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./modulesReducer";
+import "../.././styles.css";
 
 function ModuleList() {
   const { courseId } = useParams();
-  const modules = db.modules;
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
   return (
     <div>
       <div className="text-end wd-module-icons">
@@ -31,11 +40,56 @@ function ModuleList() {
         </button>
         <hr />
       </div>
+      <input
+        className="my-3"
+        value={module.name}
+        onChange={(e) =>
+          dispatch(setModule({ ...module, name: e.target.value }))
+        }
+      />
+
+      <button
+        className=" mx-2 float-end wd-home-gray-btns btn-success"
+        onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+      >
+        Add
+      </button>
+      <button
+        className=" float-end wd-home-gray-btns btn-success"
+        onClick={() => dispatch(updateModule(module))}
+      >
+        Update
+      </button>
+
+      <br />
+      <textarea
+        value={module.description}
+        onChange={(e) =>
+          dispatch(setModule({
+            ...module,
+            description: e.target.value,
+          }))
+        }
+      />
       <ul className="list-group wd-list">
         {modules
           .filter((module) => module.course === courseId)
           .map((module, index) => (
             <li key={index} className="list-group-item">
+              <button
+                className="mx-2 wd-home-gray-btns float-end"
+                onClick={() => dispatch(setModule(module))}
+              >
+                Edit
+              </button>
+
+              <button
+                className="wd-add-module-btn float-end"
+                onClick={() => dispatch(deleteModule(module._id))}
+              >
+                Delete{" "}
+              </button>
+
               {module.name}
               <p>{module.description}</p>
             </li>

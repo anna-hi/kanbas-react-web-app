@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
-import db from "../Database";
 import ".././styles.css";
+import { React} from "react";
 const dbPhoto = "/Kanbas/Dashboard/cobalt-blue.png";
-import { React, useState } from "react";
 
-function Dashboard() {
-  const [courses, setCourses] = useState(db.courses);
+function Dashboard({
+  courses,
+  course,
+  setCourse,
+  addNewCourse,
+  deleteCourse,
+  updateCourse,
+}) {
+
   return (
     <div className="wd-dashboard-header w-100 px-4">
       <h1 clasName="d-none d-md-block">Dashboard</h1>
@@ -13,6 +19,46 @@ function Dashboard() {
       <div className="wd-dashboard">
         <h2>Published Courses(24)</h2>
         <hr />
+        <h5>Course</h5>
+        <input
+          value={course.name}
+          className="form-control"
+          onChange={(e) => setCourse({ ...course, name: e.target.value })}
+        />
+
+        <input
+          value={course.number}
+          className="form-control"
+          onChange={(e) => setCourse({ ...course, number: e.target.value })}
+        />
+        <input
+          value={course.startDate}
+          className="form-control"
+          type="date"
+          onChange={(e) => setCourse({ ...course, startDate: e.target.value })}
+        />
+        <input
+          value={course.endDate}
+          className="form-control"
+          type="date"
+          onChange={(e) => setCourse({ ...course, endDate: e.target.value })}
+        />
+        <div class="text-nowrap">
+          <span class="float-end">
+            <button
+              class="wd-home-gray-btns btn-secondary"
+              onClick={addNewCourse}
+            >
+              Add
+            </button>
+            <button
+              class="wd-home-gray-btns btn-secondary"
+              onClick={updateCourse}
+            >
+              Update
+            </button>
+          </span>
+        </div>
       </div>
       <div className="d-flex flex-row flex-wrap wd-card-container wd-dashboard">
         {courses.map((course) => (
@@ -32,7 +78,25 @@ function Dashboard() {
               <p className="card-text text-muted wd-card-subtext">
                 202410_1 Fall 2023 Semester Full Term
               </p>
-              <i className="bi bi-journal-text wd-card-icon"></i>
+              <i className="bi bi-journal-text wd-card-icon pr-3"></i>
+              <button
+                class="wd-home-gray-btns btn-secondary"
+                onClick={(event) => {
+                  event.preventDefault();
+                  setCourse(course);
+                }}
+              >
+                Edit
+              </button>
+              <button
+                class="wd-home-gray-btns btn-secondary"
+                onClick={(event) => {
+                  event.preventDefault();
+                  deleteCourse(course._id);
+                }}
+              >
+                Delete
+              </button>
             </div>
           </Link>
         ))}
