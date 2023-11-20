@@ -1,5 +1,5 @@
 import PassingFunctions from "./PassingFunctions";
-import ReduxExamples from "./ReduxExamples"
+import ReduxExamples from "./ReduxExamples";
 import Add from "./Add";
 
 function Assignment4() {

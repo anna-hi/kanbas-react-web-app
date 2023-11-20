@@ -1,4 +1,10 @@
-import { Navigate, Routes, Route, useParams, useLocation } from "react-router-dom";
+import {
+  Navigate,
+  Routes,
+  Route,
+  useParams,
+  useLocation,
+} from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import Home from "./Home";
@@ -6,12 +12,24 @@ import Assignments from "./Assignments";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import ".././styles.css";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-function Courses({ courses }) {
+function Courses({}) {
   const { courseId } = useParams();
   const { pathname } = useLocation();
   const path = pathname.split("/").splice(4);
-  const course = courses.find((course) => course._id === courseId);
+  const API_BASE = process.env.REACT_APP_API_BASE;
+  const URL = `${API_BASE}/api/courses`;
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(`${URL}/${courseId}`);
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
   return (
     <div className="w-100 px-4">
       <div className="wd-header row">
@@ -21,7 +39,9 @@ function Courses({ courses }) {
             <Breadcrumb.Item href="#">
               {course.number + 12631.20241}
             </Breadcrumb.Item>
-            <Breadcrumb.Item href="#" active>{path}</Breadcrumb.Item>
+            <Breadcrumb.Item href="#" active>
+              {path}
+            </Breadcrumb.Item>
           </Breadcrumb>
         </div>
 

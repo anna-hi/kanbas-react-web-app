@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -6,14 +6,41 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
+import * as client from "./client";
+import { findModulesForCourse, createModule } from "./client";
 import "../.././styles.css";
 
 function ModuleList() {
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
   const { courseId } = useParams();
+  useEffect(() => {
+    findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId]);
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
+
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
+  const handleAddModule = () => {
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
   const dispatch = useDispatch();
+  
   return (
     <div>
       <div className="text-end wd-module-icons">
@@ -50,13 +77,13 @@ function ModuleList() {
 
       <button
         className=" mx-2 float-end wd-home-gray-btns btn-success"
-        onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+        onClick={handleAddModule}
       >
         Add
       </button>
       <button
         className=" float-end wd-home-gray-btns btn-success"
-        onClick={() => dispatch(updateModule(module))}
+        onClick={handleUpdateModule}
       >
         Update
       </button>
@@ -85,7 +112,7 @@ function ModuleList() {
 
               <button
                 className="wd-add-module-btn float-end"
-                onClick={() => dispatch(deleteModule(module._id))}
+                onClick={() => handleDeleteModule(module._id)}
               >
                 Delete{" "}
               </button>
