@@ -13,6 +13,7 @@ import { findModulesForCourse, createModule } from "./client";
 import "../.././styles.css";
 
 function ModuleList() {
+  const dispatch = useDispatch();
   const handleDeleteModule = (moduleId) => {
     client.deleteModule(moduleId).then((status) => {
       dispatch(deleteModule(moduleId));
@@ -24,9 +25,9 @@ function ModuleList() {
       .then((modules) =>
         dispatch(setModules(modules))
     );
-  }, [courseId]);
+  }, [courseId, dispatch]);
   const handleUpdateModule = async () => {
-    const status = await client.updateModule(module);
+    await client.updateModule(module);
     dispatch(updateModule(module));
   };
 
@@ -38,8 +39,6 @@ function ModuleList() {
       dispatch(addModule(module));
     });
   };
-
-  const dispatch = useDispatch();
   
   return (
     <div>

@@ -18,17 +18,17 @@ function WorkingWithArrays() {
     setTodos([...todos, response.data]);
   };
 
-  const fetchTodos = async () => {
-    const response = await axios.get(API);
-    setTodos(response.data);
-  };
   useEffect(() => {
+    const fetchTodos = async () => {
+      const response = await axios.get(API);
+      setTodos(response.data);
+    };
     fetchTodos();
-  }, []);
-  const createTodo = async () => {
-    const response = await axios.get(`${API}/create`);
-    setTodos(response.data);
-  };
+  }, [API]);
+  // const createTodo = async () => {
+  //   const response = await axios.get(`${API}/create`);
+  //   setTodos(response.data);
+  // };
 
   const updateTodo = async () => {
     try {

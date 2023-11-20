@@ -15,20 +15,21 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-function Courses({}) {
+function Courses() {
   const { courseId } = useParams();
   const { pathname } = useLocation();
   const path = pathname.split("/").splice(4);
   const API_BASE = process.env.REACT_APP_API_BASE;
   const URL = `${API_BASE}/api/courses`;
   const [course, setCourse] = useState({});
-  const findCourseById = async (courseId) => {
-    const response = await axios.get(`${URL}/${courseId}`);
-    setCourse(response.data);
-  };
+  
   useEffect(() => {
+    const findCourseById = async (courseId) => {
+      const response = await axios.get(`${URL}/${courseId}`);
+      setCourse(response.data);
+    };
     findCourseById(courseId);
-  }, [courseId]);
+  }, [URL, courseId]);
 
   return (
     <div className="w-100 px-4">

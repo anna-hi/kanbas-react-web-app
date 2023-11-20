@@ -11,13 +11,13 @@ function Kanbas() {
   const [courses, setCourses] = useState([]);
   const API_BASE = process.env.REACT_APP_API_BASE;
   const URL = `${API_BASE}/api/courses`;
-  const findAllCourses = async () => {
-    const response = await axios.get(URL);
-    setCourses(response.data);
-  };
   useEffect(() => {
+    const findAllCourses = async () => {
+      const response = await axios.get(URL);
+      setCourses(response.data);
+    };
     findAllCourses();
-  }, []);
+  }, [URL]);
 
   const [course, setCourse] = useState({
     name: "New Course",
@@ -38,11 +38,11 @@ function Kanbas() {
   };
 
   const deleteCourse = async (course) => {
-    const response = await axios.delete(`${URL}/${course._id}`);
+    await axios.delete(`${URL}/${course._id}`);
     setCourses(courses.filter((c) => c._id !== course._id));
   };
   const updateCourse = async (course) => {
-    const response = await axios.put(`${URL}/${course._id}`, course);
+    await axios.put(`${URL}/${course._id}`, course);
     setCourses(
       courses.map((c) => {
         if (c._id === course._id) {

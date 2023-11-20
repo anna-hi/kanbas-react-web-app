@@ -18,13 +18,13 @@ function EncodingParametersInURLs() {
   };
 
   const [welcome, setWelcome] = useState("");
-  const fetchWelcome = async () => {
-    const response = await axios.get(`${API_BASE}/a5/welcome`);
-    setWelcome(response.data);
-  };
   useEffect(() => {
+    const fetchWelcome = async () => {
+      const response = await axios.get(`${API_BASE}/a5/welcome`);
+      setWelcome(response.data);
+    };
     fetchWelcome();
-  }, []);
+  }, [API_BASE]);
   return (
     <div>
       <h3>Encoding Parameters In URLs</h3>
