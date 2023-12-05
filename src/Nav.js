@@ -12,6 +12,9 @@ function Nav() {
       <Link className="nav-link" to="/Labs/a5">
         A5
       </Link>
+      <Link className="nav-link" to="/project">
+        Project
+      </Link>
       <Link className="nav-link" to="/hello">
         Hello
       </Link>
@@ -23,3 +26,4 @@ function Nav() {
 }
 
 export default Nav;
+
