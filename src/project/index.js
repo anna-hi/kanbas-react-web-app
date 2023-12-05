@@ -1,7 +1,7 @@
-import Signin from "../users/signin";
-import Account from "../users/account";
-import UserTable from "../users/table";
-import Signup from "../users/signup";
+import Signin from "../Users/signin";
+import Signup from "../Users/signup";
+import UserTable from "../Users/table";
+import Account from "../Users/account";
 
 import { Routes, Route, Navigate } from "react-router-dom";
 import Nav from "./nav";
